@@ -6,7 +6,7 @@
 # Datatypes (KEYWORD1)
 #######################################
 
-BOT_I	KEYWORD1
+BOT_IV2	KEYWORD1
 
 #######################################
 # Methods and Functions (KEYWORD2)
@@ -17,6 +17,7 @@ analog	KEYWORD2
 SW1	KEYWORD2
 BOT_I_begin KEYWORD2
 servo KEYWORD2
+Knob KEYWORD2
 
 #######################################
 # Constants (LITERAL1)
