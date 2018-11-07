@@ -11,7 +11,7 @@
 #define A10 14
 #define A11 12
 #define A12 13
-#define _Knob 
+#define _Knob 4
 #define _servo1 18
 #define _servo2 19
 #define _servo3 23
@@ -116,11 +116,11 @@ void BOT_I_V2begin(){
   pinMode(A10,INPUT);
   pinMode(A11,INPUT);
   pinMode(A12,INPUT);
+  pinMode(_Knob,INPUT);
   pinMode(2,OUTPUT);
   pinMode(16,OUTPUT);
   pinMode(17,OUTPUT);
   pinMode(5,OUTPUT);
-
   ledcSetup(2, 5000, 8);
   ledcSetup(3, 5000, 8);
   ledcSetup(4, 5000, 8);
@@ -135,6 +135,9 @@ void BOT_I_V2begin(){
 }
 int SW1(){
  return digitalRead(15);
+}
+int Knob(){
+ return digitalRead(_Knob);
 }
 int analog(int port){
 	if(port == 1)return (int)analogRead(A1);
