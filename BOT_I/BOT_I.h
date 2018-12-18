@@ -11,6 +11,7 @@
 #define A10 14
 #define A11 12
 #define A12 13
+#define _knob 4
 #define _servo1 18
 #define _servo2 19
 #define _servo3 23
@@ -115,6 +116,7 @@ void BOT_I_begin(){
   pinMode(A10,INPUT);
   pinMode(A11,INPUT);
   pinMode(A12,INPUT);
+  pinMode(_knob,INPUT);
   pinMode(15,OUTPUT);
   pinMode(16,OUTPUT);
   pinMode(17,OUTPUT);
@@ -128,12 +130,6 @@ void BOT_I_begin(){
   ledcAttachPin(16, 3);
   ledcAttachPin(17, 4);
   ledcAttachPin(5, 5);
-  
-  
-  
-}
-int SW1(){
- return digitalRead(2);
 }
 int analog(int port){
 	if(port == 1)return (int)analogRead(A1);
@@ -151,6 +147,13 @@ int analog(int port){
 
   
 }
+int SW1(){
+ return digitalRead(2);
+}
+int Knob(){
+ return analogRead(_knob);
+}
+
 void motor(int pin,int Speeds){
 	int _SpeedsA;
 	int _SpeedsB;
