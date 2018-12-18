@@ -106,9 +106,9 @@ void Run() {                                    //เดินจับเส้
     int speed_motor_forword = speed_max + output;
     int speed_motor_backward = speed_max - output;
     if (speed_motor_forword > 100)speed_motor_forword = 100;
-    if (speed_motor_forword < 0 )speed_motor_forword = 0;
+    if (speed_motor_forword < -100 )speed_motor_forword = -100;
     if (speed_motor_backward > 100)speed_motor_backward = 100;
-    if (speed_motor_backward < 0 )speed_motor_backward = 0;
+    if (speed_motor_backward < -100 )speed_motor_backward = -100;
     if (Position() > 0) {
       motor(2, speed_motor_forword);
       motor(1, speed_motor_backward);
@@ -147,9 +147,9 @@ void Run_s() {                                                    //เดิน
     int speed_motor_forword = speed_max + output;
     int speed_motor_backward = speed_max - output;
     if (speed_motor_forword > 100)speed_motor_forword = 100;
-    if (speed_motor_forword < 0 )speed_motor_forword = 0;
+    if (speed_motor_forword < -100 )speed_motor_forword = -100;
     if (speed_motor_backward > 100)speed_motor_backward = 100;
-    if (speed_motor_backward < 0 )speed_motor_backward = 0;
+    if (speed_motor_backward < -100 )speed_motor_backward = -100;
     if (Position() > 0) {
       motor(2, speed_motor_forword);
       motor(1, speed_motor_backward);
@@ -195,9 +195,9 @@ void Run_L() {
     int speed_motor_forword = speed_max + output;
     int speed_motor_backward = speed_max - output;
     if (speed_motor_forword > 100)speed_motor_forword = 100;
-    if (speed_motor_forword < 0 )speed_motor_forword = 0;
+    if (speed_motor_forword < -100 )speed_motor_forword = -100;
     if (speed_motor_backward > 100)speed_motor_backward = 100;
-    if (speed_motor_backward < 0 )speed_motor_backward = 0;
+    if (speed_motor_backward < -100 )speed_motor_backward = -100;
     if (Position() > 0) {
       motor(2, speed_motor_forword);
       motor(1, speed_motor_backward);
